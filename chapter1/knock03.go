@@ -4,12 +4,12 @@ import "strings"
 
 func WordCount(str string) []int {
 
+	str = strings.Trim(str, ",")
+	str = strings.Trim(str, ".")
 	words := strings.Split(str, " ")
 
 	var list []int
 	for _, word := range words {
-		word = strings.Trim(word, ",")
-		word = strings.Trim(word, ".")
 		list = append(list, len(word))
 	}
 	return list

@@ -6,7 +6,7 @@ func Concatenate(s string) string {
 	out := ""
 	for i := 0; i < len(rune); i++ {
 		if i%2 == 0 {
-			out += string(rune[i : i+1])
+			out += string(rune[i])
 		}
 	}
 	return string(out)
