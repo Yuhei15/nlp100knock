@@ -16,5 +16,5 @@ func ElementSymbol(str string) map[int]string {
 			list[i+1] = string([]rune(word)[0:2])
 		}
 	}
-	return nil
+	return list
 }
