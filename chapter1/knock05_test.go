@@ -17,8 +17,6 @@ func TestWordNgram(t *testing.T) {
 	}
 }
 
-// [["I" "am"] ["am" "an"] ["an" "NLPer"]],
-// want [["I" "am"] ["am" "an"] ["an" "NLPer"]]
 func TestCharacterNgram(t *testing.T) {
 	in := "I am an NLPer"
 	want := [][]string{
