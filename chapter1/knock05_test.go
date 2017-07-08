@@ -13,7 +13,7 @@ func TestWordNgram(t *testing.T) {
 		{"an", "NLPer"},
 	}
 	if got := WordNgram(in); !reflect.DeepEqual(got, want) {
-		t.Errorf("Reverse(%q) == %q, want %q", in, got, want)
+		t.Errorf("WordNgram(%q) == %q, want %q", in, got, want)
 	}
 }
 
@@ -28,6 +28,6 @@ func TestCharacterNgram(t *testing.T) {
 		{"e", "r"},
 	}
 	if got := CharacterNgram(in); !reflect.DeepEqual(got, want) {
-		t.Errorf("Reverse(%q) == %q, want %q", in, got, want)
+		t.Errorf("CharacterNgram(%q) == %q, want %q", in, got, want)
 	}
 }

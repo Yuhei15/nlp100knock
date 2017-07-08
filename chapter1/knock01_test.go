@@ -9,9 +9,8 @@ func TestConcatenate(t *testing.T) {
 		{"パタトクカシーー", "パトカー"},
 	}
 	for _, c := range cases {
-		got := Concatenate(c.in)
-		if got != c.want {
-			t.Errorf("Reverse(%q) == %q, want %q", c.in, got, c.want)
+		if got := Concatenate(c.in); got != c.want {
+			t.Errorf("Concatenate(%q) == %q, want %q", c.in, got, c.want)
 		}
 	}
 }

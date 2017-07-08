@@ -11,9 +11,8 @@ func TestMixConcatenate(t *testing.T) {
 		{"パトカー", "タクシー", "パタトクカシーー"},
 	}
 	for _, c := range cases {
-		got := MixConcatenate(c.in1, c.in2)
-		if got != c.want {
-			t.Errorf("Reverse(%q,%q) == %q, want %q", c.in1, c.in2, got, c.want)
+		if got := MixConcatenate(c.in1, c.in2); got != c.want {
+			t.Errorf("MixConcatenate(%q,%q) == %q, want %q", c.in1, c.in2, got, c.want)
 		}
 	}
 }
