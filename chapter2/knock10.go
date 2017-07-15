@@ -1,29 +1,24 @@
-package main
+package chapter2
 
-import (
-	"bufio"
-	"fmt"
-	"log"
-)
+import "bufio"
 
 import "os"
 
-func wcLine(filePath string) int {
+func WCLine(filePath string) int {
 
 	file, err := os.Open(filePath)
 	if err != nil {
-		log.Fatal(err)
+		panic(err.Error())
 	}
 	defer file.Close()
 
 	lines := 0
-
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		lines++
 	}
 	if err := scanner.Err(); err != nil {
-		fmt.Println(err)
+		panic(err.Error())
 	}
 	return lines
 }
